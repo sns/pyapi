@@ -40,6 +40,6 @@ class BaseHandler(tornado.web.RequestHandler):
             logger.debug("Returning default argument %s, as we couldn't find "
                     "'%s' in %s" % (default, name, self.request.arguments))
             return default
-        arg = self.request.arguments[name]
+        arg = self.get_argument(name)
         logger.debug("Found '%s': %s in JSON arguments" % (name, arg))
         return arg

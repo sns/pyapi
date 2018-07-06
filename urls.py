@@ -1,5 +1,5 @@
 from handlers.test import TestHandler
 
 url_patterns = [
-    (r"/test", TestHandler),
+    (r"/", TestHandler),
 ]
